@@ -26,3 +26,15 @@ jobs:
         run: |
          docker pull python:3.12-slim
          docker images
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'python:3.12-slim'
+          format: 'json'
+          output: 'trivy-results.json'
+          severity: 'CRITICAL,HIGH'
+      - name: Upload Docker Image
+        uses: actions/upload-artifact@v5.0.0
+        with:
+           name: scanresults
+           path: trivy-results.json
