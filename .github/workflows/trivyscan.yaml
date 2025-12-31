@@ -36,5 +36,5 @@ jobs:
       - name: Upload Docker Image Scan results
         uses: actions/upload-artifact@v5.0.0
         with:
-           name: scanresults
+           name: scanresults1
            path: trivy-results.json
