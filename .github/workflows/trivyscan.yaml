@@ -31,10 +31,10 @@ jobs:
         with:
           image-ref: 'python:3.12-slim'
           format: 'cyclonedx'
-          output: 'trivy-results.json'
+          output: 'trivy-results.cdx'
           severity: 'CRITICAL,HIGH'
       - name: Upload Docker Image Scan results
         uses: actions/upload-artifact@v5.0.0
         with:
-           name: scanresults1
+           name: scanresults
            path: trivy-results.json
