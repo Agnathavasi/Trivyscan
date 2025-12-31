@@ -33,7 +33,7 @@ jobs:
           format: 'json'
           output: 'trivy-results.json'
           severity: 'CRITICAL,HIGH'
-      - name: Upload Docker Image
+      - name: Upload Docker Image Scan results
         uses: actions/upload-artifact@v5.0.0
         with:
            name: scanresults
