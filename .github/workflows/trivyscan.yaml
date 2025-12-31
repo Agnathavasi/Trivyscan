@@ -45,3 +45,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUBTOKEN }}
           image: docker pull vitamojo/mysql5:latest
+          severity: MEDIUM,HIGH,CRITICAL
