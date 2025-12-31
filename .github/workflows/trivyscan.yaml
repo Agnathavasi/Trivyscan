@@ -41,8 +41,3 @@ jobs:
         with:
            name: scanresults
            path: trivy-results.cdx
-      - uses: lazy-actions/gitrivy@v2.0.0
-        with:
-          token: ${{ secrets.GITHUBTOKEN }}
-          image: docker pull vitamojo/mysql5:latest
-          severity: MEDIUM,HIGH,CRITICAL
