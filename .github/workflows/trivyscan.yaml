@@ -33,7 +33,8 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: myprac/python:"${GITHUB_SHA::7}"
+          tags: myprac/python:${{github.sha}}
+
 
 
 
