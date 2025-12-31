@@ -30,7 +30,7 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: 'python:3.12-slim'
-          format: 'json'
+          format: 'cyclonedx'
           output: 'trivy-results.json'
           severity: 'CRITICAL,HIGH'
       - name: Upload Docker Image Scan results
